@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // Плавные переходы к якорям через меню
+        $(document).ready(function(){
+            $("#menu").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 500);
+            });
+        });
+        // Плавные переходы к якорям через кнопку в opening-section
+        $(document).ready(function(){
+            $("#work-button").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 500);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="main-wrapper main-menu">
+            <div class="header-logo">LØGØ</div>
+            <nav id="menu">
+                <ul>
+                    <li><a href="#work-section">Work</a></li>
+                    <li><a href="#team-section">Team</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="opening-section">
+            <div class="main-wrapper opening">
+                <div class="opening_item0">
+                    <h1>let us make <br> your lives easier</h1>
+                </div>
+                <div class="opening_item1">
+                    <p>We specialize in crafting awesome ideas for web, mobile and beyond.</p>
+                </div>
+                <div id="work-button" class="opening_item2">
+                    <a href="#work-section">
+                        <div class="opening_button">
+                            <img src="src/path_50.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="work-section" class="work-section">
+            <div class="main-wrapper">
+                <div class="head-block-text">
+                    <h2>featured work</h2>
+                    <p>Here you can find some of our latest works, to see the details of these works <br>
+                        just click the thumbnails below.</p>
+                </div>
+                <div class="work-tumbnails">
+                    <a href="#"><div class="work_item work_1"></div></a>
+                    <a href="#"><div class="work_item work_2"></div></a>
+                    <a href="#"><div class="work_item work_3"></div></a>
+                    <a href="#"><div class="work_item work_4"></div></a>
+                    <a href="#"><div class="work_item work_5"></div></a>
+                    <a href="#"><div class="work_item work_6"></div></a>
+                    <a href="#"><div class="work_item work_7"></div></a>
+                    <a href="#"><div class="work_item work_8"></div></a>
+                    <a href="#"><div class="work_item work_9"></div></a>
+                </div>
+            </div>
+        </section>
+        <section id="team-section" class="team-section">
+            <div class="main-wrapper">
+                <div class="head-block-text">
+                    <h2>team</h2>
+                    <p>We are a hard working group, who's aim is to listen to your problems <br>
+                        and to come up with the best solution possible. We follow the lates trends on <br>
+                        the web to create custom talierd niche websites.</p>
+                </div>
+                <div class="team-list">
+                    <div class="team-item">
+                        <div class="team-pic team_1"></div>
+                        <h3>NAME SURNAME</h3>
+                        <p>Lead Developer</p>
+                        <div class="team-links">
+                            <a href="#"><div class="team-pic-link team-twitter" title="Twitter"></div></a>
+                            <a href="#"><div class="team-pic-link team-linked" title="Linked in"></div></a>
+                        </div>
+                    </div>
+                    <div class="team-item">
+                        <div class="team-pic team_2"></div>
+                        <h3>NAME SURNAME</h3>
+                        <p>Lead Designer</p>
+                        <div class="team-links">
+                            <a href="#"><div class="team-pic-link team-twitter" title="Twitter"></div></a>
+                            <a href="#"><div class="team-pic-link team-dribbbel" title="Dribbbel"></div></a>
+                            <a href="#"><div class="team-pic-link team-linked" title="Linked in"></div></a>
+                        </div>
+                    </div>
+                    <div class="team-item">
+                        <div class="team-pic team_3"></div>
+                        <h3>NAME SURNAME</h3>
+                        <p>Marketing Director</p>
+                        <div class="team-links">
+                            <a href="#"><div class="team-pic-link team-skype" title="Skype"></div></a>
+                            <a href="#"><div class="team-pic-link team-linked" title="Linked in"></div></a>
+                        </div>
+                    </div>
+                    <div class="team-item">
+                        <div class="team-pic team_4"></div>
+                        <h3>NAME SURNAME</h3>
+                        <p>Business Director</p>
+                        <div class="team-links">
+                            <a href="#"><div class="team-pic-link team-skype" title="Skype "></div></a>
+                            <a href="#"><div class="team-pic-link team-linked" title="Linked in"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-section" class="contact-section">
+            <div class="main-wrapper">
+                <div class="head-block-text">
+                    <h2>contact</h2>
+                </div>
+                <div class="contact-div">
+                    <div>
+                        <p>Where are we located?</p>
+                        <div class="google-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1503.3385747578395!2d29.006076312146597!3d41.0979001646432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5d601b717af%3A0xf35f1a503f69f5bc!2zSHV6dXIsIEFobWV0IEJheW1hbiBDZC4gTm86OCwgMzQzOTYgU2FyxLF5ZXIvxLBzdGFuYnVsLCDQotGD0YDRhtC40Y8!5e0!3m2!1sru!2sua!4v1608274293766!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Want to contact us now? Just drop us a line below.</p>
+                        <form id="contact-form" action="#" method="post">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Leave us a message..."></textarea>
+                            <div class="contact-form_inputs">
+                                <input type="email" name="" id="email-field" class="email-field" placeholder="your@mail.com">
+                                <a href="javascript:{}" onclick="document.getElementById('contact-form').submit();">
+                                    <div class="submit-button">
+                                        <img src="src/submit-img.png" alt="">
+                                        <p>SEND</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="main-wrapper">
+                <p><span>Address:</span> Name street No:8, Name of city - Name of country</p>
+                <p>Copyright © 2020</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
